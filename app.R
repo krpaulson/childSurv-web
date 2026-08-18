@@ -2,6 +2,30 @@ library(shiny)
 library(knitr)
 library(grid)
 
+countries <- c("Kenya", "Brazil", "Estonia", "Syrian Arab Republic",
+               "Argentina", "Australia", "Bahamas", "Bangladesh",
+               "Barbados", "Belgium", "Benin", "Bulgaria", "Burkina Faso",
+               "Burundi", "Cambodia", "Cameroon", "Canada",
+               "Central African Republic", "Chad", "Chile",
+               "Colombia", "Comoros", "Congo Democratic Republic",
+               "Congo", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus",
+               "Dominican Republic", "Ecuador", "Egypt", "El Salvador",
+               "Ethiopia", "Finland", "France", "Gabon", "Gambia",
+               "Ghana", "Guatemala", "Guinea", "Haiti", "Honduras",
+               "Iceland", "Indonesia", "Japan", "Jordan", "Kazakhstan",
+               "Lao People's Democratic Republic", "Latvia",
+               "Lesotho", "Liberia", "Madagascar", "Malawi", "Mali",
+               "Malta", "Mauritania", "Mauritius", "Mexico", "Morocco",
+               "Mozambique", "Namibia", "Nepal", "Nicaragua", "Niger",
+               "Nigeria", "Paraguay", "Peru", "Philippines", "Poland",
+               "Portugal", "Romania", "Rwanda",
+               "Saint Vincent and the Grenadines", "Serbia",
+               "Sierra Leone", "Singapore", "Slovenia", "South Africa",
+               "Sri Lanka", "State of Palestine", "Sudan",
+               "Tanzania", "Thailand", "Timor-Leste",
+               "Togo", "Uganda", "United Kingdom of Great Britain and Northern Ireland",
+               "Yemen", "Zambia", "Zimbabwe")
+
 ui <- fluidPage(
   titlePanel("Child mortality estimates"),
   
@@ -10,7 +34,7 @@ ui <- fluidPage(
       selectInput(
         "set_choice",
         "Country:",
-        choices = c("Kenya", "Brazil", "Estonia", "Syrian Arab Republic")
+        choices = countries
       ),
       tags$p(
         "Based on methods described in [enter citation of paper here].",
